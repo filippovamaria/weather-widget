@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .widget {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        background-color: rgb(240, 237, 219);
+        width: 400px;
+        height: 200px;
+        padding-top: 20px;
+        border-radius: 30px;
+        border: 2px solid rgb(180, 176, 154);
+        margin: 30px;
+    }
+
+    .widget_search {
+        display: flex;
+        justify-content: center;
+        width: 85%;
+        height: 23px;
+
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    .widget_search_input {
+        width: 90%;
+        height: 100%;
+        outline: none;
+        outline-offset: 0;
+        border: none;
+    }
+
+    .widget_search_icon {
+        width: 25px;
+        height: 100%;
+    }
+
+    .widget_searchResult {
+        background-color: white;
+        margin-top: 2px;
+        width: 85%;
+        max-height: 120px;
+        overflow-x: scroll;
+
+        position: absolute;
+        z-index: 9;
+        top: 40px
+    }
+
+    div p {
+        margin-left: 5px;
+    }
+
+    .widget_currentTemp{
+        width: 20px;
+        height: 40px;
+    }
+
+    .widget_info{
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+        height: 150px;
+        margin-top: 5px;
+    }
+
+    .widget_info_temp{
+        margin-top: 10px;
+        height: 100%;
+        width: 150px;
+    }
+
+    .widget_info_cityNameAndIcon{
+        margin-top: 10px;
+        height: 100%;
+        width: 150px;
+    }
+
+    .widget_info_temp_current{
+        width: 100%;
+        height: 70px;
+        font-size: 50px;
+    }
+
+    .text{
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    .widget_info_cityNameAndIcon_cityName{
+        margin-top: 5px;
+        font-size: 23px;
+        text-align: right;
+    }
+
+    .widget_info_cityNameAndIcon_icon{
+        width: 130px;
+        height: 70px;
+        margin-top: 20px;
+    }
+
+    .widget_info_cityNameAndIcon_icon img{
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <div class="widget">
+        <div class="widget_search">
+            <input class="widget_search_input" type="text">
+            <img class="widget_search_icon" src="search.png" alt="magnifyingGlass">
+        </div>
+        <div class="widget_searchResult"></div>
+        <div class="widget_info">
+            <div class="widget_info_temp">
+                <div class="widget_info_temp_current">13˚</div>
+                <div class="widget_info_temp_feelsLike text">Feels like 13˚</div>
+                <div class="widget_info_temp_min text">Min: 13˚</div>
+                <div class="widget_info_temp_max text">Max: 13˚</div>
+            </div>
+            <div class="widget_info_cityNameAndIcon">
+                <div class="widget_info_cityNameAndIcon_cityName">Moscow</div>
+                <!-- <div class="widget_info_cityNameAndIcon_icon"> -->
+                    <img class="widget_info_cityNameAndIcon_icon" src="/clear.svg">
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js.js"></script>
+
+</html>
